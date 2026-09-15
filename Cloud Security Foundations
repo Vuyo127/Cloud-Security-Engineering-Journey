@@ -1,0 +1,8 @@
+1 Networking
+|IP Address|
+An IP Address is a unique numerical label that is assigned to a device connected on a network for communication. IPv4 and IPv6 are the two types of IP addresses. IPv4 is a 32 bit address and uses 4 decimal numbers 
+separated by a fullstop. An IPv6 address is a 128 bit address and is written in hexadecimal separated by colons. A static IP Address is assigned manually to a device and is fixed. It is normally given to servers
+and or other critical devices. A dynamic IP Address is assigned by the DHCP server and can change over time. It is given to cellular devices or other computers. An IP Address identifies a device on a network and
+provides its location, this enables data to be sent and received accurately. A device that requests a webpage, the request is sent to a DNS server to find the IP Address of that webpage. The DNS server translates
+the domain name into an IP Address, this allows the device to connect to the website and retrieve its data. Attackers can exploit open ports that are associated to the addresses and thereby gaining unauthorised 
+access. 
