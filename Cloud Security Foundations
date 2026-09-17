@@ -6,3 +6,38 @@ and or other critical devices. A dynamic IP Address is assigned by the DHCP serv
 provides its location, this enables data to be sent and received accurately. A device that requests a webpage, the request is sent to a DNS server to find the IP Address of that webpage. The DNS server translates
 the domain name into an IP Address, this allows the device to connect to the website and retrieve its data. Attackers can exploit open ports that are associated to the addresses and thereby gaining unauthorised 
 access. 
+
+|DNS|
+As mentioned before, the main purpose of the DNS is to translate website names into IP addresses. Azure DNS serves the same purpose. DNS hijacking and DNS spoofing are real attack vectors, which is why DNSSEC and
+monitoring DNS query logs matter. Azure monitor can ingest logs for this. 
+
+|TCP vs UDP|
+TCP is connection based, reliable and ordered. Mainly used on HTTP and SSH.
+UDP is connectionless, fast, and no delivery guarantee. Applicable in DNS queries and streaming.
+
+|Firewall|
+A firewall filters traffic by IP, port and protocol. In Azure, this is done by Network Security Groups. NSGs can attach to a subnet or a network interface. The Azure firewall is a much more managed and advanced
+firewall service. 
+
+|VPN|
+VPNs are encrypted tunnels over untrusted networks. Azure uses VPN Gateway for site-to-site connections between your on-prem network and VNet. Azure also has an ExpressRoute for private non-internet connectivity.
+
+2 Linux Fundamentals
+Most cloud infrastructure and most security tools run on Linux. 
+|File permissions|
+rwx is read/write/execute and is used for 3 tiers: owner, group, and others. It is normally shown as -rwxr-xr-- when "ls -l" is run. File permissions are applicable for misconfigured permissions. This can either be
+world writable scripts or SSH keys with permissions that are too open. These are classic findings in security audits.  
+
+|Users and groups|
+/etc/passwd lists users.
+/etc/group lists groups.
+Sudo grants elevated previlige temporarily. Sudo configurations are important because misconfigured sudo access leads to a successful previlige escalation path.
+
+|Processes|
+ps aux, top, kill are commands that are used to know whats running for incident response and for disabling unnecessary services to reduce surface attacks.
+
+|SSH|
+Key based authentication instead of passwords. SSH is constantly used to connect to AzureVMs.
+
+
+3 Scripting
