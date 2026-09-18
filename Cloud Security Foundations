@@ -41,3 +41,26 @@ Key based authentication instead of passwords. SSH is constantly used to connect
 
 
 3 Scripting
+Python is used for scripting in cloud security. Azure SDK for python and other azure tools integrate cleanly and most scripitng tools are python based. Bash is still worth knowing for quick lines and CLI chaining. 
+Python:
+- Variables, Loops and Conditionals
+- Reading and writing files in JSON because cloud APIs return JSON constantly.
+- Making API calls like requests library in python.
+- Parsing command line tool output.
+
+4 General Security
+|CIA Triad|
+Confidentiality - Only authorised persons or systems can interact with data that is within their jurisdiction level.
+Integrity - Data cannot be tampered with. Hashing and checksums promote integrity.
+Availability - Systems stay up and usable. 
+Every security control maps back to protecting one or more of htese three.
+
+|Threat Modelling|
+The process of asking what are we protecting, who might attack it, how, and whtas the impact?. A common lightweight framework is STRIDE. Spoofing, Tampering, Repudiation, Information Disclosure, Denial of service, and
+Elevation of previlige. Microsoft came up with STRIDE so it pops up a lot in Azure security training.
+
+|Encryption|
+Symmetric, Asymmetric and TLS are the different encrytpion types. In Azure, encyrption keys are managed via the Azure Key Vault. 
+Symmetric Encryption - The same key encrypts and decrypts. It is fast and is used for bulk data. AES is the standard for symmetric encryption.
+Asymmetric Encryption - Uses private and public key pairs. It is used for key exchange and signing.
+TLS - Uses asymmetric encryption to securely exchange a symmetric key. TLS then uses that symmetric key for actual data trasnfer. TLS is what makes HTTP fast and secure.
